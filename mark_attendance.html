@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mark Attendance</title>
+</head>
+<body>
+    <h2>Mark Attendance</h2>
+
+    <form method="post">
+        Select Student:
+        <select name="roll">
+            {% for s in students %}
+            <option value="{{ s[0] }}">{{ s[0] }} - {{ s[1] }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+
+        Status:
+        <select name="status">
+            <option value="Present">Present</option>
+            <option value="Absent">Absent</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Submit Attendance</button>
+    </form>
+
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>
